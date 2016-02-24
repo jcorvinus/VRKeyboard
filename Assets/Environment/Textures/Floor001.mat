@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Floor001
+  m_Shader: {fileID: 4800000, guid: 400a16de57a637f468dab1f38afbe96f, type: 3}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 462be82a7a029fb4da54498a5f283876, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 0e496582a850b6445b7556daaf3453b4, type: 3}
+          m_Scale: {x: 3, y: 3}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Cube
+        second:
+          m_Texture: {fileID: 8900000, guid: 2695d5b82cf7c62449e924d5f080d38f, type: 2}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Spec_Gloss_Reflec_Masks
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Reflection
+        second: .173076928
+      data:
+        first:
+          name: _Shininess
+        second: .85265702
+      data:
+        first:
+          name: _Gloss
+        second: .478473067
+      data:
+        first:
+          name: _FrezPow
+        second: 1.25
+      data:
+        first:
+          name: _FrezFalloff
+        second: 4.57692289
+      data:
+        first:
+          name: _EdgeAlpha
+        second: .057692308
+      data:
+        first:
+          name: _Metalics
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: .653653383, g: .694414675, b: .723880589, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: .76119405, g: .687346876, b: .760161161, a: .576470613}

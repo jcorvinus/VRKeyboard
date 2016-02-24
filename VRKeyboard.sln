@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRKeyboard.CSharp", "VRKeyboard.CSharp.csproj", "{D4C1B17E-2BFB-560C-8704-14AA6C7828C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRKeyboard.CSharp.Editor", "VRKeyboard.CSharp.Editor.csproj", "{DD50375C-9AC1-DFD0-ACEA-72A814F3B97B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4C1B17E-2BFB-560C-8704-14AA6C7828C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4C1B17E-2BFB-560C-8704-14AA6C7828C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4C1B17E-2BFB-560C-8704-14AA6C7828C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4C1B17E-2BFB-560C-8704-14AA6C7828C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD50375C-9AC1-DFD0-ACEA-72A814F3B97B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD50375C-9AC1-DFD0-ACEA-72A814F3B97B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD50375C-9AC1-DFD0-ACEA-72A814F3B97B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD50375C-9AC1-DFD0-ACEA-72A814F3B97B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
