@@ -41,16 +41,23 @@ public class WristMenu : MonoBehaviour
 
     [Header("Visibility Variables")]
     public bool Visible=false;
-    public Transform CameraTransform;
-    public float InnerWindowCameraDot = 0;
 
-    // Use this for initialization
-	void Start () 
+    void OnEnable()
     {
         ResetButton.ButtonActivated += ResetButton_ButtonActivated;
         LettersButton.ButtonActivated += LettersButton_ButtonActivated;
         NumbersButton.ButtonActivated += NumbersButton_ButtonActivated;
+    }
 
+    void OnDisable()
+    {
+        ResetButton.ButtonActivated -= ResetButton_ButtonActivated;
+        LettersButton.ButtonActivated -= LettersButton_ButtonActivated;
+        NumbersButton.ButtonActivated -= NumbersButton_ButtonActivated;
+    }
+
+    void Start () 
+    {
         transform.SetParent(Forearm);
         transform.localPosition = LocalOffset;
 	}
@@ -70,16 +77,27 @@ public class WristMenu : MonoBehaviour
         UnityEngine.VR.InputTracking.Recenter();
     }
 	
-	// Update is called once per frame
 	void Update () 
     {
-        InnerWindowCameraDot = Vector3.Dot(CameraTransform.transform.forward, transform.forward);
-        Visible = !(InnerWindowCameraDot > -0.8f);
+        transform.localScale = Vector3.Lerp(transform.localScale, (Visible) ? Vector3.one : Vector3.zero, Time.deltaTime * 4.5f);
+	}
 
+    public void Show()
+    {
+        Visible = true;
+        SetButtonVisibility(Visible);
+    }
+
+    public void Hide()
+    {
+        Visible = false;
+        SetButtonVisibility(Visible);
+    }
+
+    public void SetButtonVisibility(bool visible)
+    {
         ResetButton.gameObject.SetActive(Visible);
         LettersButton.gameObject.SetActive(Visible);
         NumbersButton.gameObject.SetActive(Visible);
-
-        transform.localScale = Vector3.Lerp(transform.localScale, (Visible) ? Vector3.one : Vector3.zero, Time.deltaTime * 4.5f);
-	}
+    }
 }
