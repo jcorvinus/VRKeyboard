@@ -79,6 +79,10 @@ public class KeyButton : MonoBehaviour
         SetText();
 
         keyboard.AddKey(this);
+
+        button.ButtonActivated += OnButtonActivated;
+        button.ButtonHovered += OnButtonHoverGained;
+        button.ButtonHoverEnded += OnButtonHoverLost;
     }
 
     private void SetText()
@@ -113,20 +117,14 @@ public class KeyButton : MonoBehaviour
     void OnDisable()
     {
         keyboard.RemoveKey(this);
+        button.ButtonActivated -= OnButtonActivated;
+        button.ButtonHovered -= OnButtonHoverGained;
+        button.ButtonHoverEnded -= OnButtonHoverLost;
     }
 
-	// Use this for initialization
 	void Start () 
     {
-        button.ButtonActivated += OnButtonActivated;
-        button.ButtonHovered += OnButtonHoverGained;
-        button.ButtonHoverEnded += OnButtonHoverLost;
-	}
-	
-	// Update is called once per frame
-	void Update () 
-    {
-	
+
 	}
 
     #region Event Methods
